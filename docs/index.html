@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <title>My Page</title>
     <meta name="author" content="Ava">
     <meta name="date" content="2025-09-10">
     <meta name="description" content="Personal homepage for Ava">
+ </head>
 <body>
+<a id="top"></a> <!-- back-to-top anchor -->
 
-  <p>My name is Ava <em>&aelig;v&#601;</em> and <strong>strong</strong> text.</p>
-</body>
-</html>
-<h1>About Me</h1>
-<p>Visit <a href=https://github.com/Cricketcircus>Example</a>.</p>
+<header>
+   <h1>Welcome to my girlblog &lt;3</h1>
+   <div class=expanding-spacer></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#opinions">Opinions</a>
+      <a href="#course">Course</a>
+      <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<h2>Interests</h2>
-<p><img src=".\Jan_Matejko,_Stańczyk.jpg" alt="welcome to my girlblog"></p>
-<ul>
+<main>
+  <p><img src=".\orcle.jpg" alt="The Oracle by Biacca"></p>
+  
+ 
+  <section id="about">
+    <h2>
+      <details onclick="play()">
+        <summary>About Me</summary>
+  <p><img src=".\Jan_Matejko,_Stańczyk.jpg" alt="Stańczyk by Jan Matejko"></p>
+      </details>
+    </h2>
+  </section>
+  
+  <section id="opinions">
+  <h2>
+      <details onclick="play()">
+        <summary>Opinions</summary>
+  <p><img src=".\Jan_Matejko,_Stańczyk.jpg" alt="Stańczyk by Jan Matejko"></p>
+      </details>
+    </h2>
+  </section>
+
+  <section id="course">
+   <h2>
+      <details onclick="play()">
+        <summary>Buy My Course!</summary>
+  <p><img src=".\oplia.jpg" alt="Stańczyk by Jan Matejko"></p>
+      </details>
+    </h2>
+  </section>
+  
+  <section id="contact">
+    <h2>
+      <details onclick="play()">
+        <summary>Contact</summary>
+  <p><img src=".\Jan_Matejko,_Stańczyk.jpg" alt="Stańczyk by Jan Matejko"></p>
+      </details>
+    </h2>
+  </section>
+
+
+  <ul>
     <li>Write a paragraph</li>
     <li>Add one link</li>
     <li>Insert an image with a good <code>alt</code> description</li>
-    
   </ul>
-<p>morphology is cool, too.</p>
+
+  <p>Thank you for visiting my mindpalace, get out.</p>
+  <p>Maybe visit <a href=https://github.com/Cricketcircus>My GitHub</a>?</p>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Cricket "Ber" Circus <a href="#top">Back to top</a>
+</footer>
+
+
+<audio src=".\bell.mp3" id="audioPlayer"></audio>
+<script>
+  const yearSpan = document.getElementById("year");
+  yearSpan.textContent = new Date().getFullYear();
+
+  let audioPlayer = document.getElementById('audioPlayer');
+  function play(){
+    audioPlayer.load(); // reload the audio player so that the audio restarts from the beginning on each click
+    audioPlayer.play();
+  }
+</script>
+
+
+</body>
+</html>

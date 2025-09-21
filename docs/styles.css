@@ -1,30 +1,62 @@
 :root{
   --ink: xxxx;                /* text color */
-  --paper: xxxx;              /* page background */
+  --paper: #b4afab;              /* page background */
   --brand-gold: xxxx;         /* accent */
-  --space-2: XXxxrem;         /* spacing scale */
+  --space-2: 1rem;         /* spacing scale */
 }
-header{
+
+.expanding-spacer {
+  flex-grow: 1;
+}
+
+.footer-spacer {
+  
+}
+
+body{ margin: 0; color: var(--ink); background: var(--paper); }
+
+header {
+  display: flex;
   position: sticky; top: 0;
   background: var(--paper);
+  background: rgba(19, 1, 0, 0.5);
   border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding: 0.3rem calc(var(--space-2) * 0.75);
+  margin-bottom: 0rem;
 }
-nav{
+
+img {
+  display: block;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+}
+
+nav {
   display: flex;
   gap: var(--space-2);
   justify-content: center;
   padding: calc(var(--space-2) * 0.75) 0;
 }
+
 nav a:hover{ background: rgba(xxxx,xxxx,xxxx,xxxx); } /* input your values! */
-body{ color: var(--ink); background: var(--paper); }
+
+main{
+
+}
 /*comment*/
 p {
+  margin-top: 0rem;
   color: black;
-  padding: 5px;
+  padding: 0px;
   background: #9f8872;
   font-size: 1.2rem;
 }
 
+a:link {
+  color: black;
+  text-decoration-color: black;
+}
 
 h1 {
   font-size: 2rem; 
